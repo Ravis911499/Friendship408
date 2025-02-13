@@ -75,6 +75,16 @@ function nextQuestion() {
     startQuiz();
 }
 
+// Automatically Play/Pause Videos on Hover
+document.addEventListener("DOMContentLoaded", function () {
+    const videos = document.querySelectorAll(".video-item");
+
+    videos.forEach(video => {
+        video.addEventListener("mouseover", () => video.play());
+        video.addEventListener("mouseout", () => video.pause());
+    });
+});
+
 // Secret Message
 function revealMessage() {
     document.getElementById("secret-message").classList.remove("d-none");
