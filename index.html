@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Memory</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Music -->
+    <audio id="bg-music" autoplay loop>
+        <source src="/Pal-song.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Countdown Timer -->
+    <div class="countdown-container text-center">
+        <h2>Time Left Until The Day Ends</h2>
+        <div id="countdown" class="timer"></div>
+    </div>
+
+    <!-- Homepage -->
+    <section id="home" class="text-center py-5">
+        <h1 class="display-3">Hey Gorgeous, Rupali... 😍</h1>
+        <p class="lead">This is for you, the most extraordinary person who has added a spark into my college life and
+            made some unforgettable memories!</p>
+    </section>
+
+    <!-- Flirty Lines Section with Profile Pic -->
+    <div class="flirty-container">
+        <img src="pics/B1.jpg" class="profile-pic" alt="Her Pic">
+        <div>
+            <h3>For My Favorite Distraction 😍😉</h3>
+            <h5 id="flirty-text"></h5>
+            <button class="btn btn-warning" onclick="changeFlirtyLine()">Click Here</button>
+        </div>
+    </div>
+
+    <!-- Interactive Quiz -->
+    <div class="quiz-container text-center">
+        <button class="btn btn-danger" onclick="startQuiz()">How Well Do You Know Me?</button>
+        <div id="quiz" class="quiz-content d-none"></div>
+    </div>
+
+    <!-- Memories Section -->
+    <div class="container text-center mt-5">
+        <h2>Our Beautiful Memories 📸</h2>
+        <div class="memories-gallery">
+            <div class="memories-track" id="memories-gallery">
+                <img src="pics/A1.jpg" alt="1">
+                <img src="pics/A2.jpg" alt="2">
+                <img src="pics/A3.jpg" alt="3">
+                <img src="pics/A4.jpg" alt="4">
+                <img src="pics/A5.jpg" alt="5">
+                <img src="pics/A6.jpg" alt="6">
+                <img src="pics/A7.jpg" alt="7">
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center mt-5">
+        <h2>Our Beautiful Memories part-II 📸</h2>
+        <div class="memories-gallery">
+            <div class="memories-track" id="memories-gallery">
+                <img src="pics/A8.jpg" alt="8">
+                <img src="pics/A9.jpg" alt="9">
+                <img src="pics/A10.jpg" alt="10">
+                <img src="pics/A11.jpg" alt="11">
+                <img src="pics/A12.jpg" alt="12">
+                <img src="pics/A13.jpg" alt="13">
+                <img src="pics/A14.jpg" alt="14">
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center mt-5">
+        <h2>Our Beautiful Memories part-III 📸</h2>
+        <div class="memories-gallery">
+            <div class="memories-track" id="memories-gallery">
+                <img src="pics/D1.jpg" alt="1">
+                <img src="pics/D2.jpg" alt="2">
+                <img src="pics/D3.jpg" alt="3">
+                <img src="pics/D4.jpg" alt="4">
+                <img src="pics/D5.jpg" alt="5">
+                <img src="pics/D6.jpg" alt="6">
+                <img src="pics/D7.jpg" alt="7">
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center mt-5">
+        <h2>Our Beautiful Memories part-IV 📸</h2>
+        <div class="memories-gallery">
+            <div class="memories-track" id="memories-gallery">
+                <img src="pics/D8.jpg" alt="8">
+                <img src="pics/D9.jpg" alt="9">
+                <img src="pics/D10.jpg" alt="10">
+                <img src="pics/D11.jpg" alt="11">
+                <img src="pics/D12.jpg" alt="12">
+                <img src="pics/D13.jpg" alt="13">
+                <img src="pics/D14.jpg" alt="14">
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center mt-5">
+        <h2>Our Beautiful Memories part-V 📸</h2>
+        <div class="memories-gallery">
+            <div class="memories-track" id="memories-gallery">
+                <img src="pics/H1.jpg" alt="1">
+                <img src="pics/H2.jpg" alt="2">
+                <img src="pics/H3.jpg" alt="3">
+                <img src="pics/H4.jpg" alt="4">
+                <img src="pics/H5.jpg" alt="5">
+                <img src="pics/H6.jpg" alt="6">
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center mt-5">
+        <h2>Our Beautiful Memories part-VI 📸</h2>
+        <div class="memories-gallery">
+            <div class="memories-track" id="memories-gallery">
+                <img src="pics/H7.jpg" alt="7">
+                <img src="pics/H8.jpg" alt="8">
+                <img src="pics/H9.jpg" alt="9">
+                <img src="pics/H10.jpg" alt="10">
+                <img src="pics/H11.jpg" alt="11">
+                <img src="pics/H12.jpg" alt="12">
+            </div>
+        </div>
+    </div>
+
+    <!-- Secret Message -->
+    <div class="text-center secret-container">
+        <h2>A Special Note Just for You 💌
+            <button class="btn btn-success" onclick="revealMessage()">Click Here</button>
+        </h2><br>
+
+        <h5>Hey Ruu....</h5>
+        <h5 id="secret-message" class="d-none">You are not just my best friend, but my daily dose of happiness. You turn
+            my chaotic college life into something magical. If life is a circuit, then you are my voltage source, making
+            everything work perfectly. 😘</h5>
+        <h5>Love, Vaibhav 💖</h5>
+    </div>
+
+    <!-- Surprise Element -->
+    <div class="text-center surprise-container">
+        <button class="btn btn-warning" onclick="showSurprise()">Click for a Surprise 🎆</button>
+    </div><br>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <p>Made with ❤️ for My Bestie | 2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="fireworks.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+body {
+    background-color: #ffe6e6;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.countdown-container {
+    margin: 20px;
+    font-size: 24px;
+    color: #d63384;
+}
+
+.timer {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff3366;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.flirty-container, .secret-container, .quiz-container {
+    margin: 3% 10% 3% 10%;
+    padding: 20px;
+    /* background-color: white; */
+    background: linear-gradient(to right, #ff9a9e, #fecfef);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Memories Section */
+.memories-gallery {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.memories-track {
+    display: flex;
+    gap: 15px;
+    animation: scroll-left 10s linear infinite;
+}
+
+.memories-track img {
+    height: auto;
+    width: 300px;
+    border-radius: 20px;
+}
+
+.memories-track :hover {
+    transition: transform .5s ease-in-out;
+    transform: scale(1.1);
+}
+
+.footer {
+    background-color: #ff3366;
+    color: white;
+    padding: 20px;
+}
+
+/* Flirty Lines with Profile Pic */
+.flirty-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Infinite Scroll */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.div button {
+    background-color: #d63384;
+}
+
+/*
+@keyframes scrollMemories {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+*/
